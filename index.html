@@ -21,12 +21,22 @@
     </nav>
     <div class="container">
       <div class="card quiz-card">
-        <img src="./img/pencil.jpg" class="card-img-top" alt="pencil" />
+        <img src="./img/pencil.jpg" id="header-image" class="card-img-top" alt="pencil" />
+        <div class="progress">
+            <div class="progress-bar" id="progress-bar" role="progressbar" style="width: 0%;" aria-valuemax="100">25%</div>
+          </div>
 
 
-        <div class="card-body" id="end-card" style="display: none;"> Gewonnen</div>
+        <div class="card-body" id="endScreen" style="display: none;">
+            <div class="text-center final-headline">Quiz beendet!</div>
 
-        <div class="card-body">
+           
+            <div class="text-center">
+            Du hast <b id="amount-Of-right-Questions"></b> Fragen von <b id="amount-Of-Questions"></b> richtig beantwortet. 
+            </div>
+        </div>
+
+        <div class="card-body" id="questionBody">
           <h5 class="card-title" id="questiontext">Frage</h5>
 
           <div class="card quiz-answer-card mb-2" onclick="answer('answer_1')">
